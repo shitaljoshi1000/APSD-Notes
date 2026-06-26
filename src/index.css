@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "@carbon/styles/css/styles.css";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* Carbon Design System - Palette Mapping */
+  --color-carbon-white: #ffffff;
+  --color-carbon-gray-10: #f4f4f4;
+  --color-carbon-gray-20: #e0e0e0;
+  --color-carbon-gray-30: #c6c6c6;
+  --color-carbon-gray-50: #8d8d8d;
+  --color-carbon-gray-70: #393939;
+  --color-carbon-gray-80: #262626;
+  --color-carbon-gray-90: #161616;
+  --color-carbon-gray-100: #121212;
+
+  --color-carbon-blue-10: #edf5ff;
+  --color-carbon-blue-60: #0f62fe;
+  --color-carbon-blue-70: #0043ce;
+  --color-carbon-blue-80: #002d9c;
+
+  --color-carbon-green-20: #defbe6;
+  --color-carbon-green-60: #198038;
+  --color-carbon-green-70: #0e6027;
+
+  --color-carbon-red-20: #ffd7d9;
+  --color-carbon-red-60: #da1e28;
+  --color-carbon-red-70: #a2191f;
+
+  --color-carbon-orange-20: #ffe8d6;
+  --color-carbon-orange-40: #ff832b;
+  --color-carbon-orange-60: #eb6200;
+
+  /* Animation Utilities */
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom global styles to ensure smooth scrolling and typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-carbon-white);
+  color: var(--color-carbon-gray-90);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3D Card Flip styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Carbon UIShell Overrides for premium dark-mode sidebar contrast */
+.cds--header {
+  background-color: var(--color-carbon-gray-90) !important;
+  border-bottom: 1px solid var(--color-carbon-gray-80) !important;
+}
+
+.cds--header__name, .cds--header__menu-trigger svg {
+  fill: var(--color-carbon-white) !important;
+  color: var(--color-carbon-white) !important;
+}
+
+.cds--side-nav {
+  background-color: var(--color-carbon-gray-10) !important;
+  border-right: 1px solid var(--color-carbon-gray-20) !important;
+}
+
+.cds--side-nav__item a {
+  color: var(--color-carbon-gray-70) !important;
+}
+
+.cds--side-nav__item--active a {
+  background-color: var(--color-carbon-gray-20) !important;
+  color: var(--color-carbon-blue-60) !important;
+  font-weight: 600 !important;
+}
+
+/* Dynamic breathing animation class helper */
+.breathing-bubble {
+  box-shadow: 0 0 40px rgba(15, 98, 254, 0.3);
+}
